@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2b2b3c;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo {
+  max-width: 350px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center the image and text */
+  margin-bottom: 40px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.member:nth-child(even) {
+  flex-direction: row-reverse; /* Stagger the layout by reversing every even member */
+}
+
+.member-image {
+  width: 100%;
+  max-width: 500px; /* Limits the image width */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px;
+}
+
+.member-info {
+  flex-grow: 1;
+  text-align: center; /* Centers the text */
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the text vertically */
+}
+
+.member:nth-child(even) .member-info {
+  padding-left: 0;
+  padding-right: 20px; /* Adjust padding for reversed layout */
+}
+
+.member-info .person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px; /* Adds space between each person */
+}
+
+.member-info .person p {
+  margin-right: 10px; /* Adds space between name and Instagram icon */
+  font-size: 1.2rem;
+}
+
+.member-info img {
+  width: 150px;
+  height: 35px;
+  margin-top: 20px;
+}
+
+/* Special styling for the first entry with two people */
+.member-info.multiple {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Keep the two entries closer */
+}
+
+.member-info.multiple .person {
+  flex-direction: column; /* Stack name and Instagram vertically for each person */
+  text-align: center;
+  margin-right: 15px; /* Reduced margin to bring them closer */
+}
+
+.member-info.multiple .person:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .member {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .member-image {
+      width: 100%;
+      max-width: 100%; /* Full width on mobile */
+  }
+
+  .member-info {
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .member:nth-child(even) .member-info {
+      padding-right: 0; /* Remove right padding for mobile */
+  }
+}

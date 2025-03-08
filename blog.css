@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    transition: background-image 1s ease-in-out;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 350px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.about-header-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: white;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Changed from center to flex-end */
+    height: 80vh;
+    padding-bottom: 20px; /* Added padding to create space at the bottom */
+}
+
+.blog-post {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(50, 50, 50, 0.7));
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 20px; /* Added margin to create space on the sides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added drop shadow */
+    color: white; /* Change text color to white (same as header text) */
+}
+
+.post-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.post-date {
+    font-size: 1rem;
+    color: #FFD700;
+}
+
+.post-excerpt {
+    font-size: 1.1rem;
+    color: white; /* Change text color to white (same as header text) */
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 1rem;
+    color: #FFD700;
+    text-decoration: none;
+    border: 1px solid #FFD700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Added transition for hover effect */
+}
+
+.read-more:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+.blog-post:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(50, 50, 50, 0.6)); /* Adjusted hover effect */
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+body.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Match this duration to the setTimeout in JavaScript */
+}
