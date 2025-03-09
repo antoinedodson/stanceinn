@@ -13,13 +13,13 @@ const indexMobileImages = ['images/pbg1.jpg', 'images/pbg2.jpg']; // Mobile-spec
 
 // Define blog images and corresponding blog post data
 const blogEntries = [
-    { image: "images/blog1.jpg", title: "The GatherInn", date: "July 03, 2022 · Event Coverage", excerpt: "Looking to heat up your summer? Make sure to come to our events so you don’t miss it!", link: "gatherinn.html" },
-    { image: "images/blog2.jpg", title: "Sebastian's Z3 M Coupe", date: "May 14, 2022 · Feature", excerpt: "What do you think about Sebastian’s Z3M? Clean and simple, just how we like it!", link: "sebastian-z3.html" },
-    { image: "images/blog4.jpeg", title: "Feature Car Spotlight", date: "February 15, 2023 · Car Feature", excerpt: "Check out this amazing build from one of our StanceInn members.", link: "feature-spotlight.html" },
-    { image: "images/blog5.jpeg", title: "Exclusive Behind the Scenes", date: "January 10, 2023 · Special Feature", excerpt: "Get an exclusive look at how StanceInn events are made possible.", link: "behind-the-scenes.html" },
-    { image: "images/blog6.jpeg", title: "The Best Stanced Cars of 2022", date: "December 30, 2022 · Recap", excerpt: "A recap of the best builds we’ve seen throughout the year.", link: "best-stanced-cars-2022.html" },
-    { image: "images/blog7.jpeg", title: "Meet the Team", date: "November 20, 2022 · Introduction", excerpt: "Get to know the people behind the StanceInn movement.", link: "meet-the-team.html" },
-    { image: "images/blog8.jpeg", title: "Top 5 Stance Mods", date: "October 05, 2022 · Guide", excerpt: "A guide to the best stance modifications for your build.", link: "top-stance-mods.html" }
+    { image: "images/blog1.jpg", title: "The GatherInn", date: "July 03, 2022 · Event Coverage", excerpt: "Looking to heat up your summer? Make sure to come to our events so you don’t miss it!" },
+    { image: "images/blog2.jpg", title: "Sebastian's Z3 M Coupe", date: "May 14, 2022 · Feature", excerpt: "What do you think about Sebastian’s Z3M? Clean and simple, just how we like it!" },
+    { image: "images/blog4.jpeg", title: "Feature Car Spotlight", date: "February 15, 2023 · Car Feature", excerpt: "Check out this amazing build from one of our StanceInn members." },
+    { image: "images/blog5.jpeg", title: "Exclusive Behind the Scenes", date: "January 10, 2023 · Special Feature", excerpt: "Get an exclusive look at how StanceInn events are made possible." },
+    { image: "images/blog6.jpeg", title: "The Best Stanced Cars of 2022", date: "December 30, 2022 · Recap", excerpt: "A recap of the best builds we’ve seen throughout the year." },
+    { image: "images/blog7.jpeg", title: "Meet the Team", date: "November 20, 2022 · Introduction", excerpt: "Get to know the people behind the StanceInn movement." },
+    { image: "images/blog8.jpeg", title: "Top 5 Stance Mods", date: "October 05, 2022 · Guide", excerpt: "A guide to the best stance modifications for your build." }
 ];
 
 const membersRidesEntries = [
@@ -40,13 +40,7 @@ function changeIndexBackground() {
     const body = document.body;
     const images = isMobile() ? indexMobileImages : indexDesktopImages;
 
-    // Add fade-out effect
-   // body.classList.add('fade-out');
-   // setTimeout(() => {
-   //     body.style.backgroundImage = `url(${images[currentIndex]})`;
-   //     body.classList.remove('fade-out');
-    //    body.classList.add('fade-in');
-    //}, 500); // Match this duration to the CSS transition duration
+    body.style.backgroundImage = `url(${images[currentIndex]})`;
 
     // Increment index and loop
     currentIndex = (currentIndex + 1) % images.length;
@@ -56,7 +50,6 @@ function changeIndexBackground() {
 function changeBlogBackgroundAndContent() {
     const body = document.body;
     const blogPostContainer = document.getElementById("blog-post-container");
-    
 
     const entry = blogEntries[currentIndex];
 
