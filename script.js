@@ -41,12 +41,12 @@ function changeIndexBackground() {
     const images = isMobile() ? indexMobileImages : indexDesktopImages;
 
     // Add fade-out effect
-    body.classList.add('fade-out');
-    setTimeout(() => {
-        body.style.backgroundImage = `url(${images[currentIndex]})`;
-        body.classList.remove('fade-out');
-        body.classList.add('fade-in');
-    }, 500); // Match this duration to the CSS transition duration
+    //body.classList.add('fade-out');
+    //setTimeout(() => {
+    //    body.style.backgroundImage = `url(${images[currentIndex]})`;
+    //    body.classList.remove('fade-out');
+    //    body.classList.add('fade-in');
+    //}, 500); // Match this duration to the CSS transition duration
 
     // Increment index and loop
     currentIndex = (currentIndex + 1) % images.length;
