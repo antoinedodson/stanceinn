@@ -25,8 +25,8 @@ const blogEntries = [
 
 const membersRidesEntries = [
     { image: "images/car1.jpg", name: "Antonio Ferruci", car: "Nissan Gloria", instagram: "https://www.instagram.com/gatiiboy/" },
-    { image: "images/car2.jpg", name: "Antonio Ferruci", car: "Mercedes W205", instagram: "https://www.instagram.com/bagdw205/" },
-    { image: "images/car3.jpg", name: "Bernardo Freitas", car: "Mazda RX7", instagram: "https://www.instagram.com/brew/" },
+    { image: "images/car2.jpg", name: "David Jackson", car: "Mercedes W205", instagram: "https://www.instagram.com/bagdw205/" },
+    { image: "images/car3.jpg", name: "Bernardo Freitas", car: "Subaru WRX", instagram: "https://www.instagram.com/brew/" },
     { image: "images/car4.jpg", name: "Henry Kissinger", car: "BMW M4", instagram: "https://www.instagram.com/felipe.f83/" }
 ];
 
