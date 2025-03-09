@@ -4,6 +4,7 @@ function getCurrentPage() {
     if (path.endsWith("index.html") || path === "/") return "index";
     if (path.endsWith("blog.html")) return "blog";
     if (path.endsWith("membersrides.html")) return "membersrides";
+    if (path.endsWith("members.html")) return "members";
     return null;
 }
 
@@ -92,6 +93,17 @@ function changeMembersRidesBackgroundAndContent() {
     currentIndex = (currentIndex + 1) % membersRidesEntries.length;
 }
 
+// Function to validate password and redirect to members only page
+function validatePassword(event) {
+    event.preventDefault();
+    var password = document.getElementById('password').value;
+    if (password === 'antoine') {
+        window.location.href = 'membersonly.html';
+    } else {
+        alert('Denied BOZO');
+    }
+}
+
 // Initialize the appropriate background swapping for the page
 const currentPage = getCurrentPage();
 
@@ -105,4 +117,8 @@ if (currentPage === "index") {
 } else if (currentPage === "membersrides") {
     setInterval(changeMembersRidesBackgroundAndContent, 5000);
     window.onload = changeMembersRidesBackgroundAndContent;
+} else if (currentPage === "members") {
+    window.onload = function() {
+        document.getElementById('passwordForm').addEventListener('submit', validatePassword);
+    };
 }
