@@ -58,13 +58,10 @@ nav ul li a {
 }
 
 .blog-post {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(50, 50, 50, 0.7));
-    backdrop-filter: blur(5px);
     padding: 30px;
     border-radius: 15px;
     max-width: 600px;
     margin: 0 20px; /* Added margin to create space on the sides */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added drop shadow */
     color: white; /* Change text color to white (same as header text) */
 }
 
@@ -72,7 +69,6 @@ nav ul li a {
     font-size: 2rem;
     font-weight: bold;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .post-date {
@@ -101,10 +97,6 @@ nav ul li a {
     color: black;
 }
 
-.blog-post:hover {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(50, 50, 50, 0.6)); /* Adjusted hover effect */
-}
-
 body.fade-out {
     opacity: 0;
 }
@@ -112,4 +104,11 @@ body.fade-out {
 body.fade-in {
     opacity: 1;
     transition: opacity 0.5s ease-in-out; /* Match this duration to the setTimeout in JavaScript */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
 }
