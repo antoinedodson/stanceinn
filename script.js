@@ -10,7 +10,7 @@ function getCurrentPage() {
 
 // Define desktop and mobile background images for index page
 const indexDesktopImages = ['images/bg1.jpg', 'images/bg2.jpg', 'images/bg3.jpg', 'images/bg4.jpg'];
-const indexMobileImages = ['images/pbg1.jpg', 'images/pbg2.jpg']; // Mobile-specific images
+const indexMobileImages = ['images/pbg1.jpg', 'images/pbg2.jpg', 'images/pbg3.jpg']; // Mobile-specific images
 
 // Define blog images and corresponding blog post data
 const blogEntries = [
