@@ -20,11 +20,11 @@ const indexDesktopImages = [
     { image: 'images/car70.webp', darkMode: "yes" }
 ];
 const indexMobileImages = [
-    { image: 'images/car30.webp', darkMode: "no" },
+    { image: 'images/car30.webp', darkMode: "yes" },
     { image: 'images/car36.webp', darkMode: "yes" },
     { image: 'images/car43.webp', darkMode: "no" },
-    { image: 'images/car45.webp', darkMode: "yes" },
-    { image: 'images/car49.webp', darkMode: "no" },
+//    { image: 'images/car45.webp', darkMode: "yes" },
+    { image: 'images/car49.webp', darkMode: "yes" },
     { image: 'images/car71.webp', darkMode: "yes" }
 ];
 
