@@ -126,11 +126,12 @@ function changeMembersRidesBackgroundAndContent() {
     currentIndex = (currentIndex + 1) % membersRidesEntries.length;
 }
 
-// Function to validate password and redirect to members only page
 function validatePassword(event) {
     event.preventDefault();
-    var password = document.getElementById('password').value;
-    if (password === 'antoine') {
+    const password = document.getElementById('password').value;
+    const correctHash = "b1a3c5632faeb83e49e7e7b5f507b383"; 
+
+    if (md5(password) === correctHash) { // Assuming a hashing library like `md5.js`
         window.location.href = 'membersonly.html';
     } else {
         alert('Denied BOZO');
