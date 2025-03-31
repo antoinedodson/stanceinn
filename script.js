@@ -129,7 +129,8 @@ function changeMembersRidesBackgroundAndContent() {
 function validatePassword(event) {
     event.preventDefault();
     var password = document.getElementById('password').value;
-    if (md5(password) === "b1a3c5632faeb83e49e7e7b5f507b383") { 
+    const hash = md5(password);
+    if (hash === "b1a3c5632faeb83e49e7e7b5f507b383") { 
         window.location.href = 'membersonly.html';
     } else {
         alert('Denied BOZO');
