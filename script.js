@@ -183,12 +183,12 @@ if (currentPage === "index") {
     window.onresize = changeIndexBackground;
 
 } else if (currentPage === "featured") {
-    setInterval(changeFeaturedBackgroundAndContent, 2000);
+    setInterval(changeFeaturedBackgroundAndContent, 10000);
     window.onload  = changeFeaturedBackgroundAndContent;
     window.onresize = changeFeaturedBackgroundAndContent;
 
 } else if (currentPage === "membersrides") {
-    setInterval(changeMembersRidesBackgroundAndContent, 2000);
+    setInterval(changeMembersRidesBackgroundAndContent, 10000);
     window.onload = changeMembersRidesBackgroundAndContent;
 
 } else if (currentPage === "members") {
